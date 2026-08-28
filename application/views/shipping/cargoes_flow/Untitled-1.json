@@ -1,0 +1,2456 @@
+// 20231228084008
+// https://sambu.krodec.com/zhl/C_FlowCargoes/getDataByParamAjax?shipmentStatus=INTERMODAL_SHIPMENT
+
+[
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TNY",
+    "containerNumber": "TRHU2307850",
+    "referenceNumber": null,
+    "containerSealNumber": "********",
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Full Container Gate Out",
+    "subStatus2": "Destination",
+    "shippingMode": "FCL",
+    "mblNumber": "SIND37599400",
+    "hblNumber": null,
+    "bookingNumber": "ONEYSIND37599400",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": "17946.390",
+    "totalWeightUom": "KGS",
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": "81",
+    "packageType": "PACKAGE",
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-06T11:03:59.582Z",
+    "currentLocationName": null,
+    "currentLocationUpdatedAt": "2023-09-05T18:30:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "ONEY",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 03:27:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 05:12:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-12 12:50:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselDepartureWithContainer",
+        "name": "Vessel Departure",
+        "estimateTime": null,
+        "actualTime": "2023-08-13 07:40:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselArrivalWithContainer",
+        "name": "Vessel Arrival",
+        "estimateTime": null,
+        "actualTime": "2023-09-02 01:20:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-03 11:46:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-05 06:30:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": "2023-09-06 06:30:00 PM",
+        "actualTime": null,
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2356.1375200000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-13 07:40:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-13 07:40:00 AM",
+        "dischargePort": "Los Angeles",
+        "dischargePortCode": "USLAX",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-02 01:20:00 PM",
+        "lastPort": "Los Angeles",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-02 01:20:00 PM",
+        "carrier": "ONE",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 33.716274261475,
+          "longitude": -118.26438903809
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 03:27:00 PM",
+            "eta": null,
+            "ata": "2023-08-06 05:12:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Los Angeles",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "USLAX",
+            "tripNumber": "065E",
+            "transportName": "ONE ARCADIA",
+            "etd": null,
+            "atd": "2023-08-13 07:40:00 AM",
+            "eta": null,
+            "ata": "2023-09-02 01:20:00 PM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Los Angeles",
+            "destination": "Los Angeles",
+            "originPortCode": "USLAX",
+            "destinationPortCode": "USLAX",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-05 06:30:00 PM",
+            "eta": "2023-09-06 06:30:00 PM",
+            "ata": null,
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TNZ",
+    "containerNumber": "TRHU3940219",
+    "referenceNumber": null,
+    "containerSealNumber": "********",
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Full Container Gate Out",
+    "subStatus2": "Destination",
+    "shippingMode": "FCL",
+    "mblNumber": "SIND37599400",
+    "hblNumber": null,
+    "bookingNumber": "ONEYSIND37599400",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": "17946.380",
+    "totalWeightUom": "KGS",
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": "81",
+    "packageType": "PACKAGE",
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-06T11:03:59.562Z",
+    "currentLocationName": null,
+    "currentLocationUpdatedAt": "2023-09-05T19:11:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "ONEY",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-28 01:39:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 04:35:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-12 12:50:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselDepartureWithContainer",
+        "name": "Vessel Departure",
+        "estimateTime": null,
+        "actualTime": "2023-08-13 07:40:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselArrivalWithContainer",
+        "name": "Vessel Arrival",
+        "estimateTime": null,
+        "actualTime": "2023-09-02 01:20:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-03 11:45:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-05 07:11:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": "2023-09-06 07:11:00 PM",
+        "actualTime": null,
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2356.1375200000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-13 07:40:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-13 07:40:00 AM",
+        "dischargePort": "Los Angeles",
+        "dischargePortCode": "USLAX",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-02 01:20:00 PM",
+        "lastPort": "Los Angeles",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-02 01:20:00 PM",
+        "carrier": "ONE",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 33.716274261475,
+          "longitude": -118.26438903809
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-28 01:39:00 PM",
+            "eta": null,
+            "ata": "2023-08-06 04:35:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Los Angeles",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "USLAX",
+            "tripNumber": "065E",
+            "transportName": "ONE ARCADIA",
+            "etd": null,
+            "atd": "2023-08-13 07:40:00 AM",
+            "eta": null,
+            "ata": "2023-09-02 01:20:00 PM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Los Angeles",
+            "destination": "Los Angeles",
+            "originPortCode": "USLAX",
+            "destinationPortCode": "USLAX",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-05 07:11:00 PM",
+            "eta": "2023-09-06 07:11:00 PM",
+            "ata": null,
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TP2",
+    "containerNumber": "NYKU3549586",
+    "referenceNumber": null,
+    "containerSealNumber": "********",
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Full Container Gate Out",
+    "subStatus2": "Destination",
+    "shippingMode": "FCL",
+    "mblNumber": "SIND37599400",
+    "hblNumber": null,
+    "bookingNumber": "ONEYSIND37599400",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": "13057.600",
+    "totalWeightUom": "KGS",
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": "800",
+    "packageType": "CARTON",
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-06T11:03:59.537Z",
+    "currentLocationName": null,
+    "currentLocationUpdatedAt": "2023-09-05T18:38:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "ONEY",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-28 01:39:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 04:44:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-12 12:56:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselDepartureWithContainer",
+        "name": "Vessel Departure",
+        "estimateTime": null,
+        "actualTime": "2023-08-13 07:40:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselArrivalWithContainer",
+        "name": "Vessel Arrival",
+        "estimateTime": null,
+        "actualTime": "2023-09-02 01:20:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-03 09:41:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-05 06:38:00 PM",
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": "2023-09-06 06:38:00 PM",
+        "actualTime": null,
+        "location": "Los Angeles",
+        "locationCode": "USLAX",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2356.1375200000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-13 07:40:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-13 07:40:00 AM",
+        "dischargePort": "Los Angeles",
+        "dischargePortCode": "USLAX",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-02 01:20:00 PM",
+        "lastPort": "Los Angeles",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-02 01:20:00 PM",
+        "carrier": "ONE",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 33.716274261475,
+          "longitude": -118.26438903809
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-28 01:39:00 PM",
+            "eta": null,
+            "ata": "2023-08-06 04:44:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Los Angeles",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "USLAX",
+            "tripNumber": "065E",
+            "transportName": "ONE ARCADIA",
+            "etd": null,
+            "atd": "2023-08-13 07:40:00 AM",
+            "eta": null,
+            "ata": "2023-09-02 01:20:00 PM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Los Angeles",
+            "destination": "Los Angeles",
+            "originPortCode": "USLAX",
+            "destinationPortCode": "USLAX",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-05 06:38:00 PM",
+            "eta": "2023-09-06 06:38:00 PM",
+            "ata": null,
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TP3",
+    "containerNumber": "MSMU1534666",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-25T10:32:41.479Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-25T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-25 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-25 12:00:01 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-25 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-22 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-25 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TP4",
+    "containerNumber": "MSMU1557419",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-22T20:45:08.623Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-22T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-21 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:01 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-22 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-21 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-22 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TP6",
+    "containerNumber": "MSMU1699769",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-22T19:30:24.672Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-22T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-21 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:01 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-22 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-21 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-22 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TP9",
+    "containerNumber": "MSMU2089879",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-22T19:30:24.726Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-22T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-21 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:01 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-22 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-21 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-22 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TPA",
+    "containerNumber": "MSMU2209296",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-22T19:30:24.670Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-21T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-27 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-20 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-21 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-21 12:00:01 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-21 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-27 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-20 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-21 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TPB",
+    "containerNumber": "MSDU2651207",
+    "referenceNumber": null,
+    "containerSealNumber": null,
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Empty Container Gate In",
+    "subStatus2": "Destination Port",
+    "shippingMode": "FCL",
+    "mblNumber": null,
+    "hblNumber": null,
+    "bookingNumber": "MSDUI0942315219",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": null,
+    "totalWeightUom": null,
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": null,
+    "packageType": null,
+    "commodity": null,
+    "trackingUpdatedAt": "2023-09-26T08:45:53.669Z",
+    "currentLocationName": "Lyon, France",
+    "currentLocationUpdatedAt": "2023-09-25T00:00:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "MSCU",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-28 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-17 12:00:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-09-11 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnBarge",
+        "name": "Load on Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-13 12:00:00 AM",
+        "location": "Fos sur mer",
+        "locationCode": "FRFOS",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromBarge",
+        "name": "Discharge from Barge",
+        "estimateTime": null,
+        "actualTime": "2023-09-15 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-09-22 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-25 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-09-26 12:00:00 AM",
+        "location": "Lyon, France",
+        "locationCode": "FRLIO",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "2004.5427560000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-17 12:00:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-17 12:00:00 AM",
+        "dischargePort": "Fos sur mer",
+        "dischargePortCode": "FRFOS",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-09-11 12:00:00 AM",
+        "lastPort": "Lyon, France",
+        "lastPortEta": null,
+        "lastPortAta": "2023-09-25 12:00:00 AM",
+        "carrier": "MSC",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": 43.392539978027,
+          "longitude": 4.9195022583008
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-28 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-08-06 12:00:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Fos sur mer",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "FRFOS",
+            "tripNumber": "FD336E",
+            "transportName": "MSC VIRGINIA",
+            "etd": null,
+            "atd": "2023-08-17 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-11 12:00:00 AM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Fos sur mer",
+            "destination": "Lyon, France",
+            "originPortCode": "FRFOS",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-13 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-15 12:00:00 AM",
+            "transportMode": "BARGE"
+          },
+          {
+            "origin": "Lyon, France",
+            "destination": "Lyon, France",
+            "originPortCode": "FRLIO",
+            "destinationPortCode": "FRLIO",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-09-22 12:00:00 AM",
+            "eta": null,
+            "ata": "2023-09-25 12:00:00 AM",
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "MSC",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  },
+  {
+    "shipper": null,
+    "consignee": null,
+    "shipmentNumber": "TS-5K5TPC",
+    "containerNumber": "TRHU3653899",
+    "referenceNumber": null,
+    "containerSealNumber": "********",
+    "containerSize": "20'",
+    "containerType": "Dry",
+    "containerIso": "22G0",
+    "status": "COMPLETED",
+    "subStatus1": "Full Container Gate Out",
+    "subStatus2": "Destination",
+    "shippingMode": "FCL",
+    "mblNumber": "SIND37898600",
+    "hblNumber": null,
+    "bookingNumber": "ONEYSIND37898600",
+    "createdAt": "2023-08-06T15:04:41.520Z",
+    "serviceMode": "PORT_TO_PORT",
+    "promisedEta": null,
+    "promisedEtd": null,
+    "incoterm": null,
+    "totalWeight": "21569.350",
+    "totalWeightUom": "KGS",
+    "netWeight": null,
+    "netWeightUom": null,
+    "totalNumberOfPackages": "3225",
+    "packageType": "CARTON",
+    "commodity": null,
+    "trackingUpdatedAt": "2023-08-29T17:17:26.824Z",
+    "currentLocationName": null,
+    "currentLocationUpdatedAt": "2023-08-29T23:29:00.000Z",
+    "totalVolume": null,
+    "totalVolumeUom": null,
+    "carrierScac": "ONEY",
+    "shipmentTags": [
+      
+    ],
+    "shipmentEvents": [
+      {
+        "code": "gateOutWithContainerEmpty",
+        "name": "Empty Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-07-28 01:39:00 PM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": false
+      },
+      {
+        "code": "gateInWithContainerFull",
+        "name": "Full Container Gate In",
+        "estimateTime": null,
+        "actualTime": "2023-08-06 04:11:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnVessel",
+        "name": "Load on Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-08 10:26:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselDepartureWithContainer",
+        "name": "Vessel Departure",
+        "estimateTime": null,
+        "actualTime": "2023-08-09 03:20:00 AM",
+        "location": "Singapore",
+        "locationCode": "SGSIN",
+        "hasCargo": true
+      },
+      {
+        "code": "vesselArrivalWithContainer",
+        "name": "Vessel Arrival",
+        "estimateTime": null,
+        "actualTime": "2023-08-26 04:50:00 PM",
+        "location": "Tauranga",
+        "locationCode": "NZTRG",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromVessel",
+        "name": "Discharge from Vessel",
+        "estimateTime": null,
+        "actualTime": "2023-08-27 11:40:00 AM",
+        "location": "Tauranga",
+        "locationCode": "NZTRG",
+        "hasCargo": true
+      },
+      {
+        "code": "loadOnRail",
+        "name": "Load on Rail",
+        "estimateTime": null,
+        "actualTime": "2023-08-27 10:55:00 PM",
+        "location": "Tauranga",
+        "locationCode": "NZTRG",
+        "hasCargo": true
+      },
+      {
+        "code": "railDepartureWithContainer",
+        "name": "Rail Departure",
+        "estimateTime": null,
+        "actualTime": "2023-08-28 07:02:00 AM",
+        "location": "Tauranga",
+        "locationCode": "NZTRG",
+        "hasCargo": true
+      },
+      {
+        "code": "railArrivalWithcontainer",
+        "name": "Rail Arrival",
+        "estimateTime": null,
+        "actualTime": "2023-08-28 08:25:00 PM",
+        "location": "Auckland",
+        "locationCode": "NZAKL",
+        "hasCargo": true
+      },
+      {
+        "code": "dischargeFromRail",
+        "name": "Discharge from Rail",
+        "estimateTime": null,
+        "actualTime": "2023-08-29 09:35:00 PM",
+        "location": "Auckland",
+        "locationCode": "NZAKL",
+        "hasCargo": true
+      },
+      {
+        "code": "gateOutWithContainerFull",
+        "name": "Full Container Gate Out",
+        "estimateTime": null,
+        "actualTime": "2023-08-29 11:29:00 PM",
+        "location": "Auckland",
+        "locationCode": "NZAKL",
+        "hasCargo": true
+      },
+      {
+        "code": "gateInWithContainerEmpty",
+        "name": "Empty Container Gate In",
+        "estimateTime": "2023-08-30 11:29:00 PM",
+        "actualTime": null,
+        "location": "Auckland",
+        "locationCode": "NZAKL",
+        "hasCargo": false
+      }
+    ],
+    "emissions": {
+      "co2e": {
+        "value": "1557.4104170000",
+        "unit": "Kg"
+      }
+    },
+    "shipmentLegs": {
+      "originToPort": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      },
+      "portToPort": {
+        "firstPort": "Singapore",
+        "firstPortEtd": null,
+        "firstPortAtd": "2023-08-09 03:20:00 AM",
+        "loadingPort": "Singapore",
+        "loadingPortCode": "SGSIN",
+        "loadingPortEtd": null,
+        "loadingPortAtd": "2023-08-09 03:20:00 AM",
+        "dischargePort": "Tauranga",
+        "dischargePortCode": "NZTRG",
+        "dischargePortEta": null,
+        "dischargePortAta": "2023-08-26 04:50:00 PM",
+        "lastPort": "Auckland",
+        "lastPortEta": null,
+        "lastPortAta": "2023-08-28 08:25:00 PM",
+        "carrier": "ONE",
+        "currentTransportName": null,
+        "currentTripNumber": null,
+        "latestLocation": {
+          "latitude": null,
+          "longitude": null
+        },
+        "flowPredictedLastPortEta": null,
+        "imoNumber": null,
+        "loadingPortCoordinates": {
+          "latitude": 1.2475363016129,
+          "longitude": 103.71643066406
+        },
+        "dischargePortCoordinates": {
+          "latitude": -37.655349731445,
+          "longitude": 176.17738342285
+        },
+        "segments": [
+          {
+            "origin": "Singapore",
+            "destination": "Singapore",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "SGSIN",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-07-28 01:39:00 PM",
+            "eta": null,
+            "ata": "2023-08-06 04:11:00 AM",
+            "transportMode": "TRUCK"
+          },
+          {
+            "origin": "Singapore",
+            "destination": "Tauranga",
+            "originPortCode": "SGSIN",
+            "destinationPortCode": "NZTRG",
+            "tripNumber": "330S",
+            "transportName": "SFL MAUI",
+            "etd": null,
+            "atd": "2023-08-09 03:20:00 AM",
+            "eta": null,
+            "ata": "2023-08-26 04:50:00 PM",
+            "transportMode": "VESSEL"
+          },
+          {
+            "origin": "Tauranga",
+            "destination": "Auckland",
+            "originPortCode": "NZTRG",
+            "destinationPortCode": "NZAKL",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-08-28 07:02:00 AM",
+            "eta": null,
+            "ata": "2023-08-28 08:25:00 PM",
+            "transportMode": "RAIL"
+          },
+          {
+            "origin": "Auckland",
+            "destination": "Auckland",
+            "originPortCode": "NZAKL",
+            "destinationPortCode": "NZAKL",
+            "tripNumber": null,
+            "transportName": null,
+            "etd": null,
+            "atd": "2023-08-29 11:29:00 PM",
+            "eta": "2023-08-30 11:29:00 PM",
+            "ata": null,
+            "transportMode": "TRUCK"
+          }
+        ]
+      },
+      "portToDestination": {
+        "origin": null,
+        "destination": null,
+        "etd": null,
+        "atd": null,
+        "eta": null,
+        "ata": null,
+        "carrier": "ONE",
+        "serviceProvider": null,
+        "truckNumber": null,
+        "driverName": null,
+        "driverPhone": null,
+        "segments": [
+          
+        ]
+      }
+    }
+  }
+]

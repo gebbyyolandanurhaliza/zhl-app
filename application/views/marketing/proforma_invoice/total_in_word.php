@@ -1,0 +1,1 @@
+<input readonly="readonly" name="total_in_word" id="total_in_word" class="form-control" value="<?php echo $in_word ?>">

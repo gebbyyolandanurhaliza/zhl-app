@@ -1,0 +1,76 @@
+
+.fontawesome-font {
+	font-family: 'FontAwesome', Open Sans;
+}
+.w-50{
+	width: 50px;
+}
+.w-60{
+	width: 60px;
+}
+.w-70{
+	width: 70px;
+}
+.w-80{
+	width: 80px;
+}
+.w-90{
+	width: 90px;
+}
+.w-100{
+	width: 100px;
+}
+.w-110{
+	width: 110px;
+}
+.w-120{
+	width: 120px;
+}
+.w-130{
+	width: 130px;
+}
+.w-140{
+	width: 140px;
+}
+.w-150{
+	width: 150px;
+}
+.w-160{
+	width: 160px;
+}
+.w-170{
+	width: 170px;
+}
+.w-180{
+	width: 180px;
+}
+.w-190{
+	width: 190px;
+}
+.w-200{
+	width: 200px;
+}
+.bolder{
+	font-weight: bold;
+}
+
+.form-group {
+	margin-bottom: 2px;
+}
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 8px;
+    top:7px;
+}
+
+@media (min-width: 768px) {
+	.form-horizontal .control-label {    
+		text-align: left;
+	}
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0;
+}

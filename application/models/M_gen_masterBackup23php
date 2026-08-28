@@ -1,0 +1,274 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class M_gen_master extends CI_Model
+{
+
+    private $tblmst_country = 'zhl_gen_tbl_mst_country';
+    private $country_id = 'country_id';
+	
+	private $tblmst_currency = 'zhl_gen_tbl_mst_currency';
+	private $currency_id = 'currency_id';
+	
+	private $tblmst_status = 'zhl_gen_tbl_mst_status';
+	private $status_id = 'status_id';
+	
+	private $tblmst_factory = 'zhl_gen_tbl_mst_factory';
+	private $factory_id	= 'factory_id';
+	
+	private $tblmst_uom = 'zhl_gen_tbl_mst_item_uom';
+
+	private $tblmst_group_cust = 'zhl_mar_tblmst_customer_group';
+	
+	private $tblmst_ship_line = 'zhl_ship_tbl_mst_shipping_line';
+	
+    private $order = 'DESC';
+
+    function __construct()
+    {
+        parent::__construct();
+    }
+
+    // get all
+    function get_all($nama_master)
+    {
+		switch ($nama_master) {
+			case 'country':
+				$this->db->where('not_active', 0);
+				$this->db->order_by('country_name', 'ASC');
+				$result = $this->db->get($this->tblmst_country);
+				break;
+			
+			case 'currency':
+				$this->db->order_by('currency_name', 'ASC');
+				$result = $this->db->get($this->tblmst_currency);
+				break;
+			
+			case 'status':
+				$this->db->order_by('status_id', 'ASC');
+				$result = $this->db->get($this->tblmst_status);
+				break;
+			
+			case 'factory':
+				$this->db->order_by('factory_abbr', 'ASC');
+				$result = $this->db->get($this->tblmst_factory);
+				break;
+			
+			case 'uom':
+				$this->db->order_by('uomname', 'ASC');
+				$result = $this->db->get($this->tblmst_uom);
+				break;
+			
+			case 'group_customer':
+				$this->db->where('inactive', 0);
+				$result = $this->db->get($this->tblmst_group_cust);
+				break;
+			
+			case 'shipping_line':
+				$this->db->where('notactive', 0);
+				$result = $this->db->get($this->tblmst_ship_line);
+				break;
+			
+			case 'item':
+				$this->db->select('itemid,itemname');
+				$this->db->where('notactive', 0);
+				$result = $this->db->get('gen_tbl_mst_item');
+				break;
+
+			default:
+				break;
+		}
+		        
+        return $result->result();
+    }
+	
+	function get_all_with_param($nama_master, $param)
+	{
+		switch ($nama_master) {
+			case 'status':
+				$this->db->where($param);
+				$this->db->order_by('status_id', 'ASC');
+				$result = $this->db->get($this->tblmst_status);
+				break;
+
+			default:
+				break;
+		}
+		return $result->result();
+	}
+
+    // get data by id
+    function get_by_id($nama_master, $id)
+    {
+		switch ($nama_master) {
+			case 'country':
+				$table = $this->tblmst_country;
+				$this->db->where($this->country_id, $id);
+				break;
+			
+			case 'currency':
+				$table = $this->tblmst_currency;
+				$this->db->where($this->currency_id, $id);
+				break;
+			
+			case 'status':
+				$table = $this->tblmst_status;
+				$this->db->where($this->status_id, $id);
+				break;
+			
+			case 'factory':
+				$table = $this->tblmst_factory;
+				$this->db->where($this->factory_id, $id);
+				break;
+			
+			case 'group_customer':
+				$table = $this->tblmst_group_cust;
+				$this->db->where('customer_group_id', $id);
+				break;
+			
+			case 'shipping_line':
+				$table = $this->tblmst_ship_line;
+				$this->db->where('shipping_id', $id);
+				break;
+
+			default:
+				break;
+		}
+		
+        return $this->db->get($table)->row();
+    }
+    
+    // get total rows
+    function country_total_rows($q = NULL) {
+		$this->db->where('not_active', 0);
+        $this->db->like('country_id', $q);
+		$this->db->or_like('country_name', $q);
+		$this->db->or_like('country_ids', $q);
+		$this->db->or_like('country_idn', $q);
+		$this->db->from($this->tblmst_country);
+        return $this->db->count_all_results();
+    }
+
+    // get data with limit and search
+    function country_get_limit_data($limit, $start = 0, $q = NULL) {
+        $this->db->order_by($this->country_id, $this->order);
+        $this->db->like('country_id', $q);
+		$this->db->or_like('country_name', $q);
+		$this->db->or_like('country_ids', $q);
+		$this->db->or_like('country_idn', $q);
+		$this->db->or_like('created_by', $q);
+		$this->db->or_like('created_date', $q);
+		$this->db->or_like('updated_by', $q);
+		$this->db->or_like('updated_date', $q);
+		$this->db->limit($limit, $start);
+        return $this->db->get($this->tblmst_country)->result();
+    }
+
+    // insert data
+    function insert($nama_master, $data)
+    {
+        switch ($nama_master) {
+			case 'country':
+				$table = $this->tblmst_country;
+				break;
+			
+			case 'currency':
+				$table = $this->tblmst_currency;
+				break;
+			
+			case 'status':
+				$table = $this->tblmst_status;
+				break;
+			
+			case 'factory':
+				$table = $this->tblmst_factory;
+				break;
+			
+			case 'group_customer':
+				$table = $this->tblmst_group_cust;
+				break;
+
+			default:
+				break;
+		}
+		$this->db->insert($table, $data);
+    }
+
+    // update data
+    function update($nama_master, $id, $data)
+    {
+		switch ($nama_master) {
+			case 'country':
+				$table = $this->tblmst_country;
+				$this->db->where($this->country_id, $id);
+				break;
+			
+			case 'currency':
+				$table = $this->tblmst_currency;
+				$this->db->where($this->currency_id, $id);
+				break;
+			
+			case 'status':
+				$table = $this->tblmst_status;
+				$this->db->where($this->status_id, $id);
+				break;
+			
+			case 'factory':
+				$table = $this->tblmst_factory;
+				$this->db->where($this->factory_id, $id);
+				break;
+			
+			case 'group_customer':
+				$table = $this->tblmst_group_cust;
+				$this->db->where('customer_group_id', $id);
+				break;
+
+			default:
+				break;
+		}
+        
+        $this->db->update($table, $data);
+    }
+
+    // delete data
+    function delete($nama_master, $id)
+    {
+		switch ($nama_master) {
+			case 'country':
+				$table = $this->tblmst_country;
+				$this->db->where($this->country_id, $id);	
+				$this->db->update($table, array('not_active' => 1));
+				break;
+			
+			case 'currency':
+				$table = $this->tblmst_currency;
+				$this->db->where($this->currency_id, $id);	
+				$this->db->delete($table);
+				break;
+			
+			case 'status':
+				$table = $this->tblmst_status;
+				$this->db->where($this->status_id, $id);	
+				$this->db->delete($table);
+				break;
+			
+			case 'factory':
+				$table = $this->tblmst_factory;
+				$this->db->where($this->factory_id, $id);	
+				$this->db->delete($table);
+				break;
+			
+			case 'group_customer':
+				$this->db->where('customer_group_id', $id);
+				$this->db->delete($this->tblmst_group_cust);
+				break;
+
+			default:
+				break;
+		}
+	
+    }
+
+}

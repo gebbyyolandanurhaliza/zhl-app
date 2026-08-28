@@ -1,0 +1,26 @@
+# Vendor / dependencies (bisa di-generate ulang lewat composer install)
+/vendor/
+
+# Folder upload & cache runtime
+/Cb_uploads/
+/cache/
+/uploads/
+/temp_upload/
+
+# Backup manual
+/backup-file/
+
+# NetBeans project metadata
+/nbproject/
+
+# CodeIgniter logs (kalau ada folder application/logs)
+application/logs/*
+!application/logs/index.html
+
+# Environment / config sensitif (uncomment kalau ada file config lokal berisi kredensial)
+# application/config/database.php
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp

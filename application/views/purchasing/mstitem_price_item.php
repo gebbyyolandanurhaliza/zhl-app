@@ -1,0 +1,9 @@
+<?php foreach($item as $r){
+    echo '<tr ondblclick="clickdbitem(this)">';
+        echo '<td nowrap>'.$r->itemid.'</td>';
+        echo '<td nowrap>'.htmlspecialchars($r->itemname,ENT_QUOTES).'</td>';
+        echo '<td nowrap>'.$r->pmcode.'</td>';
+        echo '<td nowrap>'.$r->uomname.'</td>';
+        echo '<td nowrap>'.$r->itemremark.'</td>';
+    echo '</tr>';
+ } ?>

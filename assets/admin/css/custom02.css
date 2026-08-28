@@ -1,0 +1,170 @@
+
+.fontawesome-font {
+	font-family: 'FontAwesome', Open Sans;
+}
+.w-50{
+	width: 50px;
+}
+.w-60{
+	width: 60px;
+}
+.w-70{
+	width: 70px;
+}
+.w-80{
+	width: 80px;
+}
+.w-90{
+	width: 90px;
+}
+.w-100{
+	width: 100px;
+}
+.w-110{
+	width: 110px;
+}
+.w-120{
+	width: 120px;
+}
+.w-130{
+	width: 130px;
+}
+.w-140{
+	width: 140px;
+}
+.w-150{
+	width: 150px;
+}
+.w-160{
+	width: 160px;
+}
+.w-170{
+	width: 170px;
+}
+.w-180{
+	width: 180px;
+}
+.w-190{
+	width: 190px;
+}
+.w-200{
+	width: 200px;
+}
+.w-250{
+	width: 250px;
+}
+.w-300{
+	width: 300px;
+}
+.w-100-percent{
+	width: 100%;
+}
+
+.no-padding{
+	padding: 0;
+}
+.padding-5{
+	padding: 5px;
+}
+.padding-10{
+	padding: 10px;
+}
+.padding-15{
+	padding: 15px;
+}
+.padding-bottom-5{
+	padding-bottom: 5px;
+}
+
+.bolder{
+	font-weight: bold;
+}
+
+.form-group {
+	margin-bottom: 2px;
+}
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 8px;
+    top:7px;
+}
+.form-group.format-tgl .control-label:after{
+	font-size: 12px;
+	font-style: italic;
+	content:"(mm-dd-yyyy)";
+	position: absolute;
+	margin-left: 8px;
+    top:8px;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+.date-picker .form-control[readonly]{
+	background-color: #fff;
+}
+
+@media (min-width: 768px) {
+	.form-horizontal .control-label {    
+		text-align: left;
+	}
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0;
+}
+
+.modal{
+	border-radius: 2px;
+}
+.modal-content {
+	border-radius: 2px;
+}
+.bootbox-body{
+	font-size: 14px;
+}
+
+.v-scroll{	/*vertical scroll on table*/
+	height: 330px;
+	overflow-y: scroll;
+}
+
+.table-detail > tbody > tr > td{
+	padding: 4px;
+}
+
+.table-detail > thead > tr > th{
+	vertical-align: middle;
+}
+
+.hide-column {
+	visibility: collapse;
+}
+
+.input-table{	/*style input di dalam tabel detail*/
+	height: 28px;
+	width: 100%;
+	border: 1px solid transparent;    
+	padding: 5px 3px;
+	margin: 0;
+}
+.input-table[readonly]{	/*style input di dalam tabel detail*/
+	width: 100%;
+	border: 1px solid transparent;
+    background-color: transparent;		
+	padding: 5px 0;
+	margin: 0;
+}
+select.input-table{
+	padding: 2px 0 !important;
+}
+.bg-white[readonly] {
+	background-color: #ffffff;
+}
+.bg-grey[readonly]{
+	background-color: #eeeeee;
+}

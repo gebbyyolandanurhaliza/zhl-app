@@ -1,0 +1,1 @@
+<input id="container_size" name="container_size" type="hidden" value="<?php echo $container_size; ?>">

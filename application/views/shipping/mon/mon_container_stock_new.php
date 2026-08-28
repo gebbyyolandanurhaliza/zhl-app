@@ -1,0 +1,113 @@
+<div class="page-content">
+	
+	<div class="container-fluid">
+		<div class="row ">
+			<div class="col-md-12">
+				
+				<?php //echo $message;?>
+				
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-table theme-font"></i>
+							<span class="caption-subject theme-font bold uppercase">Stock Container</span>
+						</div>
+						<div class="actions">
+							<?php echo anchor(site_url('Shipping/container_stock_create'), '<i class="fa fa-plus"></i> Create New Stock', 'class="btn btn-primary"'); ?>
+						</div>
+<!--						<div class="tools">							
+							<a href="javascript:;" class="collapse"></a>
+							<a href="javascript:;" class="reload"></a>
+						</div>-->
+					</div>
+
+					<div class="portlet-body flip-scroll">
+						<table class="table table-bordered table-striped" id="mytable">
+							<thead>
+								<tr>
+								<th>No</th>
+								<th class="center" width="80px">Status</th>
+								<th class="center" width="80px">Remark</th>
+								<th class="center" width="80px">Container Number</th>
+								<th>Container Type</th>
+								<th>Loading Port</th>
+								<th>Arrival Date</th>
+								<th>Free Time</th>
+								<th>Remark</th>
+								<th>Factory</th>
+								<th>Supplier</th>
+								<th>Import BL NO</th>
+								<th>ETA PSG/RSUP</th>
+								<th>Free Time Expiry Date</th>
+								</tr>
+							</thead>
+							<tbody>
+							<?php
+								$start = 0;
+								foreach ($factory as $country)
+								{
+							?>
+								<tr>
+									<td class="center"><?php echo ++$start ?></td>
+									<td><?php echo $country->status ?></td>
+									<td><?php echo $country->container_number ?></td>
+									<td><?php  
+									if ($country->container_id=='1'){
+										echo "20ft Standard Container (s)";
+									}elseif ($country->container_id=='2') {
+										echo "20ft Reefer Container (s)";
+									}elseif ($country->container_id=='3') {
+										echo "40ft Standard Container (s)";
+									}elseif ($country->container_id=='4') {
+										echo "40ft High Cube Container (s)";
+									}elseif ($country->container_id=='5') {
+										echo "40ft Reefer Container (s)";
+									}elseif ($country->container_id=='6') {
+										echo "Loose Cargo";
+									}elseif ($country->container_id=='7') {
+										echo "40ft High Cube Reefer Container (s)";
+									}elseif ($country->container_id=='8') {
+										echo "See Remarks";
+									}else{
+										echo "Bulk shipment";
+									}
+									?></td>
+ 									<td><?php echo $country->loading_port ?></td>
+									<td><?php echo $country->arrival_date ?></td>
+									<td><?php echo $country->free_time ?></td>
+									<td><?php echo $country->Remark ?></td>
+									<td><?php 
+									if($country->factory=='RSUP'){
+										echo "Riau Sakti Unites Plantations";
+									}else{
+										echo "Pulau Sambu Guntung";
+									}
+									?></td>
+									<td><?php echo $country->supplier ?></td>
+									<td><?php echo $country->import_bl_no ?></td>
+									<td><?php echo $country->eta ?></td>
+									<td><?php echo $country->free_time_expiry ?></td>
+									<td><?php echo $country->free_time_expiry ?></td>
+ 								</tr>
+							<?php
+								}
+							?>
+							</tbody>
+						</table>
+					</div>
+                            <div class="actions">
+							<?php echo anchor(site_url('Shipping/container_stock_all_excel'), '<i class="fa fa-file-excel-o"></i> Print All', 'class="btn btn-primary green"'); ?>
+						    </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#mytable").dataTable();
+	});
+</script>

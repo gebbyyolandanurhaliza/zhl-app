@@ -1,0 +1,556 @@
+.fontawesome-font {
+  font-family: 'FontAwesome', Open Sans;
+}
+
+.fa-red {
+  color: red;
+}
+
+.fa-red:hover {
+  color: red;
+}
+
+.fa-grey {
+  color: #444;
+}
+
+.fa-grey:hover {
+  color: #444;
+}
+
+.fa-transparent {
+  background: transparent;
+}
+
+.v-scroll {
+  /*vertical scroll on table*/
+  height: 330px;
+  overflow-y: scroll;
+}
+
+.w-50 {
+  width: 50px;
+}
+
+.w-60 {
+  width: 60px;
+}
+
+.w-70 {
+  width: 70px;
+}
+
+.w-80 {
+  width: 80px;
+}
+
+.w-90 {
+  width: 90px;
+}
+
+.w-100 {
+  width: 100px;
+}
+
+.w-110 {
+  width: 110px;
+}
+
+.w-120 {
+  width: 120px;
+}
+
+.w-130 {
+  width: 130px;
+}
+
+.w-140 {
+  width: 140px;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.w-160 {
+  width: 160px;
+}
+
+.w-170 {
+  width: 170px;
+}
+
+.w-180 {
+  width: 180px;
+}
+
+.w-190 {
+  width: 190px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-100-percent {
+  width: 100%;
+}
+
+.h-330 {
+  height: 330px;
+}
+
+.h-350 {
+  height: 350px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.padding-5 {
+  padding: 5px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5px;
+}
+
+.padding-right-5 {
+  padding-right: 5px;
+}
+
+.padding-right-2 {
+  padding-right: 2px;
+}
+
+.bolder {
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 2px;
+}
+
+.form-group.required .control-label:after {
+  color: #d00;
+  content: "*";
+  position: absolute;
+  margin-left: 8px;
+  top: 7px;
+}
+
+.form-group.format-tgl .control-label:after {
+  font-size: 12px;
+  font-style: italic;
+  content: "(mm-dd-yyyy)";
+  position: absolute;
+  margin-left: 8px;
+  top: 8px;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+.date-picker .form-control[readonly] {
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0;
+}
+
+.modal {
+  border-radius: 2px;
+}
+
+.modal-content {
+  border-radius: 2px;
+}
+
+.bootbox-body {
+  font-size: 14px;
+}
+
+.agent-scroll {
+  height: 270px;
+  border: 1px solid #B3B1B1;
+  margin-bottom: 5px;
+  padding: 5px 2px;
+  overflow-y: scroll;
+}
+
+.doc-scroll {
+  height: 130px;
+  border: 1px solid #B3B1B1;
+  margin-bottom: 5px;
+  padding: 5px 2px;
+  overflow-y: scroll;
+}
+
+.doc-table {
+  width: 100%;
+  /*margin: 5px 2px;*/
+}
+
+.table-detail>tbody>tr>td {
+  /*padding: 4px;*/
+  padding: 1px;
+  background-color: #e5e5e5;
+}
+
+.table-detail>thead>tr>th {
+  vertical-align: middle;
+}
+
+.table-confirm>tbody>tr>td {
+  vertical-align: middle;
+}
+
+.hide-column {
+  visibility: collapse;
+}
+
+.input-table {
+  /*style input di dalam tabel detail*/
+  font-size: 12px;
+  height: 24px;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 2px;
+  margin: 0;
+}
+
+.input-table[readonly] {
+  /*style input di dalam tabel detail*/
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 2px;
+  margin: 0;
+}
+
+/*.table-detail > tbody > tr > td > .select2-container{
+	height: 24px;
+}*/
+/*.table-detail > tbody > tr > td > .select2-container > .select2-choice{
+	height: 23px;
+	padding: 1px 0;
+	line-height: 18px;
+}*/
+/*table-detail > tbody > tr > td > .select2-container > .select2-choice abbr{
+	top		: 4px;
+}*/
+
+.input-table-group-addon {
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+.input-table-group {
+  margin-bottom: 2px;
+}
+
+select.input-table {
+  padding: 2px 0 !important;
+}
+
+.bg-white[readonly] {
+  background-color: #ffffff;
+}
+
+.bg-grey[readonly] {
+  background-color: #eeeeee;
+}
+
+.bg-editable {
+  background-color: #ffffff !important;
+}
+
+.bg-success {
+  background-color: #eef7ea;
+}
+
+.bg-readonly {
+  background-color: #eeeeee;
+}
+
+.valign-middle {
+  vertical-align: middle !important;
+}
+
+.valign-top {
+  vertical-align: top !important;
+}
+
+.valign-bottom {
+  vertical-align: bottom !important;
+}
+
+/*double border style untuk header table (tr terakhir)*/
+.double-border-bottom {
+  border-bottom-width: 3px;
+  border-bottom-style: double;
+  border-bottom-color: #aaa;
+}
+
+.double-border-top {
+  border-top-width: 3px;
+  border-top-style: double;
+  border-top-color: #aaa;
+}
+
+.vehicle-info {
+  list-style-type: none;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.float-right {
+  display: block;
+  float: right;
+}
+
+.fixed-content {
+  min-height: 300px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.fixed-content-1 {
+  min-height: 358px;
+  max-height: 358px;
+}
+
+.fixed-content-2 {
+  min-height: 368px;
+  max-height: 368px;
+  overflow-y: scroll;
+}
+
+.marquee {
+  padding-top: 10px;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #cd362b;
+  color: white;
+  border: 1px solid #000;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+/* @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    } */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* body {
+    font-family: 'Lato', sans-serif;
+
+  } */
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+
+  .carousel-fade .carousel-inner>.item.next,
+  .carousel-fade .carousel-inner>.item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-fade .carousel-inner>.item.prev,
+  .carousel-fade .carousel-inner>.item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-fade .carousel-inner>.item.next.left,
+  .carousel-fade .carousel-inner>.item.prev.right,
+  .carousel-fade .carousel-inner>.item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-caption {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+  font-size: 17px
+}
+
+.carousel-caption h3 {
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+.datespan {
+  font-size: 16px !important;
+  color: #f91302;
+  font-weight: 500;
+}
+
+/* change dialog color */
+.ui-widget-header {
+  background-color: #030886 !important;
+}
+
+.ui-widget-content {
+  border-bottom: 5px solid #030886;
+  border-left: 5px solid #030886;
+  border-right: 5px solid #030886;
+}
+
+
+.rTable {
+  display: table;
+  width: 100%;
+
+}
+
+.rTableRow {
+  display: table-row;
+
+
+}
+
+.rTableHead {
+  display: table-cell;
+  padding: 3px 10px;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+}
+
+.rTableCell {
+  display: table-cell;
+  padding: 3px 10px;
+  border: 1px solid #ddd;
+}
+
+.rTableHeading {
+  display: table-header-group;
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.rTableFoot {
+  display: table-footer-group;
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+.rTableBody {
+  display: table-row-group;
+}
