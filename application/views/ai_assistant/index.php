@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+﻿<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
 <link rel="stylesheet"
       href="<?= base_url('assets/ai_assistant/css/ai_assistant.css'); ?>?v=<?= time(); ?>">
@@ -36,6 +36,12 @@
           </div>
 
           <div class="ai-head-actions">
+            <a href="<?= site_url('Gmail_agent') ?>" class="ai-ghost-btn" title="Buka Gmail Agent" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#475569;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              Gmail Agent
+            </a>
             <button type="button" id="resetBtn" class="ai-ghost-btn" title="Mulai percakapan baru">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round">
@@ -149,7 +155,7 @@
             </button>
           </div>
 
-          <p class="ai-hint">Shift + Enter untuk baris baru · Enter untuk kirim</p>
+          <p class="ai-hint">Shift + Enter untuk baris baru Â· Enter untuk kirim</p>
         </div>
 
       </div>
@@ -170,3 +176,4 @@
 <script src="<?= base_url('assets/ai_assistant/js/arrival-notice.js'); ?>?v=<?= time(); ?>"></script>
 <script src="<?= base_url('assets/ai_assistant/js/app.js'); ?>?v=<?= time(); ?>"></script>
 <script src="<?= base_url('assets/ai_assistant/js/autofill-handoff.js'); ?>?v=<?= time(); ?>"></script>
+
