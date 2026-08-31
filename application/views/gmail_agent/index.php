@@ -17,7 +17,7 @@
           </div>
           <div>
             <p class="ga-header-title">Gmail Agent</p>
-            <p class="ga-header-sub">Auto-downloader lampiran email untuk operasional ZHL</p>
+            <p class="ga-header-sub">Auto-downloader for email attachments for ZHL operations</p>
           </div>
         </div>
         <div class="ga-stats">
@@ -27,11 +27,11 @@
           </div>
           <div class="ga-stat green">
             <div class="ga-stat-val" id="statDone">0</div>
-            <div class="ga-stat-lbl">Selesai</div>
+            <div class="ga-stat-lbl">Done</div>
           </div>
           <div class="ga-stat red">
             <div class="ga-stat-val" id="statError">0</div>
-            <div class="ga-stat-lbl">Gagal</div>
+            <div class="ga-stat-lbl">Failed</div>
           </div>
         </div>
       </div>
@@ -43,13 +43,13 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
           </svg>
-          Jalankan Agent
+          Run Agent
         </button>
         <button class="ga-btn ga-btn-outline" id="btnRefreshFiles">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-.18-3.6"/>
           </svg>
-          Refresh File
+          Refresh Files
         </button>
         <span id="fetchStatus" style="font-size:12px;color:#64748b;margin-left:4px"></span>
       </div>
@@ -62,15 +62,15 @@
         </button>
         <button class="ga-tab" data-tab="files">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-          Lampiran File <span class="ga-tab-badge" id="tabBadgeFiles">0</span>
+          Attachment Files <span class="ga-tab-badge" id="tabBadgeFiles">0</span>
         </button>
         <button class="ga-tab" data-tab="results">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          Hasil <span class="ga-tab-badge" id="tabBadgeResults">0</span>
+          Results <span class="ga-tab-badge" id="tabBadgeResults">0</span>
         </button>
         <button class="ga-tab" data-tab="code">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          Kode Agent
+          Agent Code
         </button>
       </div>
 
@@ -79,12 +79,12 @@
         <div class="ga-split">
           <!-- Daftar Email -->
           <div class="ga-email-list">
-            <div class="ga-email-list-head">Daftar Email</div>
+            <div class="ga-email-list-head">Email List</div>
             <div id="emailList">
               <div class="ga-empty">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <div class="ga-empty-title">Belum ada email</div>
-                <div class="ga-empty-sub">Klik "Jalankan Agent" untuk memuat</div>
+                <div class="ga-empty-title">No emails yet</div>
+                <div class="ga-empty-sub">Click "Run Agent" to load</div>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@
           <div class="ga-detail" id="emailDetail">
             <div class="ga-detail-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <p>Pilih email dari daftar untuk melihat detail</p>
+              <p>Select an email from the list to see the details</p>
             </div>
           </div>
         </div>
@@ -101,20 +101,20 @@
       <!-- ===== TAB: FILES ===== -->
       <div class="ga-tab-content" id="tab-files">
         <div class="ga-files-toolbar">
-          <input type="text" class="ga-search" id="fileSearch" placeholder="Cari nama file...">
+          <input type="text" class="ga-search" id="fileSearch" placeholder="Search file name...">
           <select class="ga-select" id="fileTypeFilter">
-            <option value="all">Semua Tipe</option>
+            <option value="all">All Types</option>
             <option value="pdf">PDF</option>
             <option value="xlsx">Excel</option>
             <option value="csv">CSV</option>
-            <option value="jpg,jpeg,png">Gambar</option>
+            <option value="jpg,jpeg,png">Images</option>
           </select>
         </div>
         <div id="filesGrid">
           <div class="ga-empty">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-            <div class="ga-empty-title">Belum ada file lampiran</div>
-            <div class="ga-empty-sub">File yang didownload otomatis akan muncul di sini</div>
+            <div class="ga-empty-title">No attachment files yet</div>
+            <div class="ga-empty-sub">Files downloaded automatically will appear here</div>
           </div>
         </div>
       </div>
@@ -124,8 +124,8 @@
         <div id="resultsList">
           <div class="ga-empty">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            <div class="ga-empty-title">Belum ada hasil</div>
-            <div class="ga-empty-sub">Jalankan agent untuk melihat riwayat proses</div>
+            <div class="ga-empty-title">No results yet</div>
+            <div class="ga-empty-sub">Run the agent to view the processing history</div>
           </div>
         </div>
       </div>
@@ -193,15 +193,15 @@
     if (state.isFetching) return;
     state.isFetching = true;
     el.btnRun.disabled = true;
-    el.btnRun.innerHTML = '<span class="ga-spinner"></span> Memproses...';
-    setStatus('Memulai worker Gmail...');
+    el.btnRun.innerHTML = '<span class="ga-spinner"></span> Processing...';
+    setStatus('Starting Gmail worker...');
 
     postJSON(BASE + '/start_worker', {})
       .then(function (startData) {
         if (!startData || startData.success === false) {
-          throw new Error('Gagal memulai worker');
+          throw new Error('Failed to start worker');
         }
-        setStatus('Worker dijalankan. Mengambil email dari Gmail...');
+        setStatus('Worker started. Fetching emails from Gmail...');
         return postJSON(BASE + '/fetch', {});
       })
       .then(function (data) {
@@ -214,35 +214,35 @@
           showEmailDetail(state.emails[0].id);
         }
         updateStats();
-        setStatus('Email berhasil dimuat. Menjalankan download attachment...');
+        setStatus('Emails loaded successfully. Running attachment download...');
         return postJSON(BASE + '/run_cron', {});
       })
       .then(function (cronData) {
         if (cronData && cronData.error) {
           throw new Error(cronData.error);
         }
-        setStatus('Download selesai. Memuat file attachment...');
+        setStatus('Download complete. Loading attachment files...');
         return loadFiles();
       })
       .then(function () {
-        setStatus('Berhasil memuat ' + state.emails.length + ' email dan file attachment terbaru.');
+        setStatus('Successfully loaded ' + state.emails.length + ' emails and the latest attachment files.');
         switchTab('files');
         loadFiles();
       })
       .catch(function (err) {
-        setStatus('Gagal: ' + err.message, true);
+        setStatus('Failed: ' + err.message, true);
       })
       .finally(function () {
         state.isFetching = false;
         el.btnRun.disabled = false;
-        el.btnRun.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Jalankan Agent';
+        el.btnRun.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Run Agent';
       });
   }
 
   // ─── EMAIL LIST ───────────────────────────────────────────────
   function renderEmailList() {
     if (state.emails.length === 0) {
-      el.emailList.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div class="ga-empty-title">Tidak ada email</div></div>';
+      el.emailList.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div class="ga-empty-title">No emails</div></div>';
       el.tabBadgeEmails.textContent = '0';
       return;
     }
@@ -252,7 +252,7 @@
       return '<div class="ga-email-item' + (state.activeEmailId === e.id ? ' active' : '') + '" data-id="' + e.id + '">' +
         badge +
         '<div class="ga-email-item-body">' +
-          '<div class="ga-email-subject">' + esc(e.subject || '(Tanpa Subjek)') + '</div>' +
+          '<div class="ga-email-subject">' + esc(e.subject || '(No Subject)') + '</div>' +
           '<div class="ga-email-from">' + esc(e.from) + '</div>' +
           '<div class="ga-email-date">' + esc(e.date) + '</div>' +
         '</div>' +
@@ -294,12 +294,12 @@
     }
     el.emailDetail.innerHTML =
       '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">' +
-        '<div class="ga-detail-subject">' + esc(email.subject || '(Tanpa Subjek)') + '</div>' +
+        '<div class="ga-detail-subject">' + esc(email.subject || '(No Subject)') + '</div>' +
         badgeHtml(email._status, email._errorMsg) +
       '</div>' +
-      '<div class="ga-detail-meta">Dari: ' + esc(email.from) + '<br>' + esc(email.date) + '</div>' +
-      '<div class="ga-detail-section">Isi Email</div>' +
-      '<div class="ga-detail-body">' + esc(email.bodyText || '(kosong)') + '</div>' +
+      '<div class="ga-detail-meta">From: ' + esc(email.from) + '<br>' + esc(email.date) + '</div>' +
+      '<div class="ga-detail-section">Email Content</div>' +
+      '<div class="ga-detail-body">' + esc(email.bodyText || '(empty)') + '</div>' +
       attHtml + errHtml;
   }
 
@@ -325,7 +325,7 @@
     });
 
     if (filtered.length === 0) {
-      el.filesGrid.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><div class="ga-empty-title">Tidak ada file ditemukan</div><div class="ga-empty-sub">Coba ubah kata kunci pencarian</div></div>';
+      el.filesGrid.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><div class="ga-empty-title">No files found</div><div class="ga-empty-sub">Try changing the search keyword</div></div>';
       return;
     }
     el.filesGrid.innerHTML = '<div class="ga-files-grid">' + filtered.map(function (f) {
@@ -347,13 +347,13 @@
   // ─── RESULTS ──────────────────────────────────────────────────
   function renderResults() {
     if (state.emails.length === 0) {
-      el.resultsList.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div class="ga-empty-title">Belum ada hasil</div></div>';
+      el.resultsList.innerHTML = '<div class="ga-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div class="ga-empty-title">No results yet</div></div>';
       el.tabBadgeResults.textContent = '0';
       return;
     }
     el.tabBadgeResults.textContent = state.emails.length;
     el.resultsList.innerHTML = '<table class="table table-bordered table-hover" style="font-size:13px">' +
-      '<thead><tr><th>Status</th><th>Subjek</th><th>Pengirim</th><th>Lampiran</th></tr></thead><tbody>' +
+      '<thead><tr><th>Status</th><th>Subject</th><th>Sender</th><th>Attachment</th></tr></thead><tbody>' +
       state.emails.map(function (e) {
         return '<tr>' +
           '<td>' + badgeHtml(e._status, e._errorMsg) + '</td>' +
@@ -396,13 +396,13 @@
     el.codeBlock.textContent = [
       '// ============================================',
       '// Gmail Agent - ZHL App Worker Script',
-      '// Jalankan di terminal: php scripts/gmail_worker.php',
+      '// Run in terminal: php scripts/gmail_worker.php',
       '// ============================================',
       '',
-      '// Konfigurasi: application/config/gmail_agent.php',
-      '// Controller : application/controllers/Gmail_agent.php',
-      '// View       : application/views/gmail_agent/index.php',
-      '// File disimpan ke: uploads/gmail_attachments/',
+      '// Configuration: application/config/gmail_agent.php',
+      '// Controller    : application/controllers/Gmail_agent.php',
+      '// View          : application/views/gmail_agent/index.php',
+      '// Files saved to: uploads/gmail_attachments/',
       '',
       '// Gmail Query Filter:',
       '// is:unread has:attachment newer_than:1d',
@@ -410,7 +410,7 @@
       '// Status file: cron-status-gmail.json',
       '// { "enabled": true, "lastCheck": "...", "lastDownload": "..." }',
       '',
-      '// Untuk menjalankan worker secara manual:',
+      '// To run the worker manually:',
       '// cd c:/xampp/htdocs/zhl-app && php scripts/gmail_worker.php',
     ].join('\n');
   }
@@ -471,13 +471,13 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (data && data.success) {
-          setStatus('Worker Gmail otomatis aktif.');
+          setStatus('Gmail worker is active automatically.');
         } else {
-          setStatus('Worker Gmail belum aktif. Klik Jalankan Agent untuk mulai.', true);
+          setStatus('Gmail worker is not active yet. Click Run Agent to start.', true);
         }
       })
       .catch(function () {
-        setStatus('Worker Gmail belum aktif. Klik Jalankan Agent untuk mulai.', true);
+        setStatus('Gmail worker is not active yet. Click Run Agent to start.', true);
       });
   }
 
