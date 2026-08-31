@@ -1,10 +1,8 @@
-
 (function () {
   'use strict';
 
   var HANDOFF_KEY = 'zhl_ai_autofill';
   var MAX_AGE_MS = 5 * 60 * 1000; 
-
   var MONTHS = {
     JAN: 1, FEB: 2, MAR: 3, APR: 4, MAY: 5, JUN: 6,
     JUL: 7, AUG: 8, SEP: 9, OCT: 10, NOV: 11, DEC: 12,
@@ -12,18 +10,29 @@
   };
 
   var TP_CODES = {
-    D2: { size: 20, kind: 'GP' },   
-    D4: { size: 40, kind: 'GP' },   
-    D5: { size: 40, kind: 'HC' },   
-    R2: { size: 20, kind: 'RF' },   
-    R4: { size: 40, kind: 'RF' },   
-    R5: { size: 40, kind: 'RH' },   
-    O2: { size: 20, kind: 'OT' },  
+    D2: { size: 20, kind: 'GP' },
+    D4: { size: 40, kind: 'GP' },
+    D5: { size: 40, kind: 'HC' },
+    R2: { size: 20, kind: 'RF' },
+    R4: { size: 40, kind: 'RF' },
+    R5: { size: 40, kind: 'RH' },
+    O2: { size: 20, kind: 'OT' },
     O4: { size: 40, kind: 'OT' },
-    F2: { size: 20, kind: 'FR' },   
+    F2: { size: 20, kind: 'FR' },
     F4: { size: 40, kind: 'FR' },
-    T2: { size: 20, kind: 'TK' },   
+    T2: { size: 20, kind: 'TK' },
     T4: { size: 40, kind: 'TK' }
+  };
+
+  var EG_SIZE = { '2': 20, '4': 40, '5': 45 };
+
+  var EG_KIND = {
+    SD: 'GP', GP: 'GP', DV: 'GP', DC: 'GP',
+    HQ: 'HC', HD: 'HC', HC: 'HC',
+    RF: 'RF', RE: 'RF', RH: 'RH', RQ: 'RH',
+    OT: 'OT', OP: 'OT',
+    FR: 'FR', FL: 'FR', PL: 'FR',
+    TK: 'TK', TN: 'TK'
   };
 
   function log() {
@@ -98,7 +107,7 @@
 
     if (/^\d{4}$/.test(parts[0])) {        
       y = parts[0]; m = parts[1]; d = parts[2];
-    } else {                                
+    } else {                               
       d = parts[0]; m = parts[1]; y = parts[2];
     }
 
@@ -115,7 +124,7 @@
     if (!d || !m || isNaN(y)) return '';
     if (d < 1 || d > 31 || m < 1 || m > 12) return '';
 
-    if (y < 100) y = 2000 + y;              
+    if (y < 100) y = 2000 + y;             
 
     return ('0' + d).slice(-2) + '/' + ('0' + m).slice(-2) + '/' + y;
   }
@@ -138,8 +147,27 @@
     if (!raw) return null;
 
     var s = String(raw).toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (!s) return null;
 
     if (TP_CODES[s]) return TP_CODES[s];
+
+    var eg = s.match(/^([245])([A-Z]{2,3})$/);
+    if (eg && EG_SIZE[eg[1]]) {
+      return {
+        size: EG_SIZE[eg[1]],
+        kind: EG_KIND[eg[2].substring(0, 2)] || 'GP'
+      };
+    }
+
+    var iso = s.match(/^(2[0-9]|4[0-9]|L[0-9])([A-Z])[0-9]$/);
+    if (iso) {
+      var isoSize = iso[1].charAt(0) === '2' ? 20 : 40;
+      var isoHigh = iso[1] === '45' || iso[1] === '25';
+      var isoKind = { G: 'GP', R: 'RF', U: 'OT', P: 'FR', T: 'TK' }[iso[2]] || 'GP';
+      if (isoHigh && isoKind === 'GP') isoKind = 'HC';
+      if (isoHigh && isoKind === 'RF') isoKind = 'RH';
+      return { size: isoSize, kind: isoKind };
+    }
 
     var sizeMatch = s.match(/(20|40|45)/);
     if (!sizeMatch) return null;
