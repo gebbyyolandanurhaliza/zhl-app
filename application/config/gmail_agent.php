@@ -1,38 +1,69 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// ======================================================
-// Gmail OAuth2 Credentials (sama dengan pss-app)
-// ======================================================
-$config['gmail_client_id']     = getenv('GMAIL_CLIENT_ID')     ?: '686885388477-gq6ccm5sf2tibb385ln9fm8j80qdcj0u.apps.googleusercontent.com';
-$config['gmail_client_secret'] = getenv('GMAIL_CLIENT_SECRET') ?: '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';
-$config['gmail_refresh_token'] = getenv('GMAIL_REFRESH_TOKEN') ?: '1//04MaGTuMSlqqSCgYIARAAGAQSNwF-L9IrfPcvFDl4zw_4W8lDJn2bVfayMqk4F0sFvTo4gdt9RonhO5RP19h1v01Kt-yYWMVKKkc';
+$envFile = FCPATH . '.env';
+if (file_exists($envFile) && is_readable($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if ($lines !== false) {
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if ($line === '' || strpos($line, '#') === 0) {
+                continue;
+            }
+
+            $parts = explode('=', $line, 2);
+            if (count($parts) !== 2) {
+                continue;
+            }
+
+            $key = trim($parts[0]);
+            $value = trim($parts[1]);
+            $value = trim($value, " \t\n\r\0\x0B\"'");
+
+            if ($key !== '') {
+                if (!array_key_exists($key, $_ENV)) {
+                    $_ENV[$key] = $value;
+                }
+                if (getenv($key) === false) {
+                    putenv($key . '=' . $value);
+                }
+            }
+        }
+    }
+}
 
 // ======================================================
-// Konfigurasi Gmail API
+// Gmail OAuth2 credentials loaded from environment
+// ======================================================
+$config['gmail_client_id']     = getenv('GMAIL_CLIENT_ID') ?: '';
+$config['gmail_client_secret'] = getenv('GMAIL_CLIENT_SECRET') ?: '';
+$config['gmail_refresh_token'] = getenv('GMAIL_REFRESH_TOKEN') ?: '';
+
+// ======================================================
+// Gmail API configuration
 // ======================================================
 $config['gmail_token_url']   = 'https://oauth2.googleapis.com/token';
 $config['gmail_api_base']    = 'https://gmail.googleapis.com/gmail/v1/users/me';
 
 // ======================================================
-// Query Gmail: hanya email dengan attachment, lalu filter PDF di sisi aplikasi
-// agar email PDF yang namanya tidak berakhiran .pdf tetap tertangkap
+// Query Gmail: fetch unread emails with attachments, then filter PDF in app logic
+// to also catch PDFs whose filenames do not end with .pdf
 // ======================================================
-$config['gmail_query']       = 'is:unread has:attachment newer_than:7d';
-$config['gmail_max_results'] = 10;
+$config['gmail_query']       = getenv('GMAIL_QUERY') ?: 'is:unread has:attachment newer_than:7d';
+$config['gmail_max_results'] = (int) (getenv('GMAIL_MAX_RESULTS') ?: 10);
 
 // ======================================================
-// Folder penyimpanan attachment (di dalam uploads/)
+// Attachment storage directory under uploads/
 // ======================================================
 $config['gmail_attachments_path'] = FCPATH . 'uploads/gmail_attachments/';
 
 // ======================================================
-// Path file status cron (di root project)
+// Cron status file path in project root
 // ======================================================
 $config['gmail_cron_status_file'] = FCPATH . 'cron-status-gmail.json';
 
 // ======================================================
-// Secret token untuk webhook external cron
+// Secret token for external cron webhook
 // ======================================================
-$config['gmail_webhook_secret'] = 'ZHL_GMAIL_2024_SECRET';
+$config['gmail_webhook_secret'] = getenv('GMAIL_WEBHOOK_SECRET') ?: 'change-me';
 

@@ -150,9 +150,14 @@ class Gmail_agent extends MY_Controller
         if (!$this->_is_ajax()) return;
 
         // ── Verifikasi webhook token ──────────────────────────────────────
+        // Browser UI dan worker internal boleh dipakai tanpa token tambahan,
+        // tetapi request eksternal yang tidak valid tetap ditolak.
         $secret = $this->config->item('gmail_webhook_secret');
         $sent   = $this->input->post('token');
-        if (!empty($secret) && $sent !== $secret) {
+        $is_internal_worker = (bool) $this->input->post('_worker');
+        $is_browser_request = (bool) $this->_is_ajax();
+
+        if (!empty($secret) && $sent !== $secret && !$is_internal_worker && !$is_browser_request) {
             return $this->_json(401, array('error' => 'Unauthorized'));
         }
         // ────────────────────────────────────────────────────────────────

@@ -41,14 +41,46 @@ function update_last_download() {
     write_status($status);
 }
 
-function call_cron() {
-    $url = NEXT_APP_URL . '/Gmail_agent/run_cron';
-    $ch  = curl_init($url);
+function read_env_value($key, $default = '') {
+    $env_file = dirname(__DIR__) . '/.env';
+    if (!file_exists($env_file)) {
+        return $default;
+    }
 
-    // POST dengan field dummy (controller mengecek method=POST)
+    $lines = file($env_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if ($lines === false) {
+        return $default;
+    }
+
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line === '' || strpos($line, '#') === 0) {
+            continue;
+        }
+
+        $parts = explode('=', $line, 2);
+        if (count($parts) !== 2) {
+            continue;
+        }
+
+        $env_key = trim($parts[0]);
+        if ($env_key === $key) {
+            return trim(trim($parts[1]), " \t\n\r\0\x0B\"'");
+        }
+    }
+
+    return $default;
+}
+
+function call_cron() {
+    $url    = NEXT_APP_URL . '/Gmail_agent/run_cron';
+    $secret = read_env_value('GMAIL_WEBHOOK_SECRET', 'ZHL_GMAIL_2024_SECRET');
+    $ch     = curl_init($url);
+
+    // POST dengan field worker dan secret agar route cron dapat menerima call internal.
     curl_setopt_array($ch, array(
         CURLOPT_POST           => true,
-        CURLOPT_POSTFIELDS     => http_build_query(array('_worker' => 1)),
+        CURLOPT_POSTFIELDS     => http_build_query(array('_worker' => 1, 'token' => $secret)),
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_TIMEOUT        => 90,
         CURLOPT_CONNECTTIMEOUT => 10,
