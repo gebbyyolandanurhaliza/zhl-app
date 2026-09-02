@@ -270,6 +270,51 @@ class Gmail_agent extends MY_Controller
     }
 
     /**
+     * Preview file attachment secara inline untuk PDF / image
+     * GET /Gmail_agent/preview_file?name=xxx
+     */
+    public function preview_file()
+    {
+        $name     = basename((string) $this->input->get('name'));
+        $save_dir = rtrim($this->config->item('gmail_attachments_path'), '/\\') . DIRECTORY_SEPARATOR;
+        $filepath = $save_dir . $name;
+
+        if ($name === '' || !file_exists($filepath)) {
+            show_404();
+            return;
+        }
+
+        $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        $mime = 'application/octet-stream';
+
+        if ($ext === 'pdf') {
+            $mime = 'application/pdf';
+        } elseif (in_array($ext, array('png', 'jpg', 'jpeg', 'gif', 'webp'))) {
+            $mime = 'image/' . ($ext === 'jpg' ? 'jpeg' : $ext);
+        }
+
+        if (function_exists('finfo_open') && function_exists('finfo_file')) {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            if ($finfo) {
+                $detected = finfo_file($finfo, $filepath);
+                if (!empty($detected)) {
+                    $mime = $detected;
+                }
+                finfo_close($finfo);
+            }
+        }
+
+        header('Content-Type: ' . $mime);
+        header('Content-Disposition: inline; filename="' . $name . '"');
+        header('Content-Length: ' . filesize($filepath));
+        header('Cache-Control: private, must-revalidate, max-age=0');
+        header('Pragma: public');
+
+        readfile($filepath);
+        exit;
+    }
+
+    /**
      * Daftar file yang sudah tersimpan di folder attachment
      * GET /Gmail_agent/list_files
      */

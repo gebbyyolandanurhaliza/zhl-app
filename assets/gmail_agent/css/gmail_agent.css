@@ -5,7 +5,7 @@
 
 :root {
   --ga-blue:      #3b82f6;
-  --ga-indigo:    #4f46e5;
+  --ga-indigo:    #030886;
   --ga-green:     #10b981;
   --ga-red:       #ef4444;
   --ga-yellow:    #f59e0b;
@@ -26,7 +26,8 @@
 
 /* ---- Header card ---- */
 .ga-header {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  /* background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); */
+  background: #030886;
   border-radius: var(--ga-radius);
   padding: 24px 28px;
   color: var(--ga-white);
@@ -139,13 +140,13 @@
   margin-bottom: -2px; transition: all .2s; white-space: nowrap;
 }
 .ga-tab:hover { color: var(--ga-blue); }
-.ga-tab.active { color: var(--ga-blue); border-bottom-color: var(--ga-blue); }
+.ga-tab.active { color: var(--ga-indigo); border-bottom-color: var(--ga-indigo); }
 .ga-tab-badge {
   display: inline-block; background: var(--ga-gray-200);
   color: var(--ga-gray-700); border-radius: 99px;
   font-size: 10px; padding: 1px 7px; margin-left: 4px;
 }
-.ga-tab.active .ga-tab-badge { background: var(--ga-blue); color: #fff; }
+.ga-tab.active .ga-tab-badge { background: var(--ga-indigo); color: #fff; }
 
 /* ---- Tab panels ---- */
 .ga-tab-content { display: none; }
@@ -251,16 +252,58 @@
   transition: box-shadow .2s, transform .2s;
 }
 .ga-file-card:hover { box-shadow: var(--ga-shadow); transform: translateY(-2px); }
+.ga-file-card-pdf { cursor: pointer; }
 .ga-file-icon { font-size: 28px; }
 .ga-file-name { font-size: 12px; font-weight: 600; color: var(--ga-gray-800); word-break: break-word; }
 .ga-file-meta { font-size: 11px; color: var(--ga-gray-400); }
+.ga-file-actions {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.ga-file-download, .ga-file-preview {
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 6px;
+  padding: 5px 10px; transition: background .15s; cursor: pointer;
+}
 .ga-file-download {
-  margin-top: auto; display: inline-flex; align-items: center; gap: 5px;
-  font-size: 12px; font-weight: 600; color: var(--ga-blue); text-decoration: none;
-  padding: 5px 10px; border: 1px solid #bfdbfe; border-radius: 6px;
-  transition: background .15s;
+  color: var(--ga-blue); border: 1px solid #bfdbfe; background: var(--ga-white);
+}
+.ga-file-preview {
+  color: #0f766e; background: #ecfeff; border: 1px solid #99f6e4;
 }
 .ga-file-download:hover { background: #eff6ff; }
+.ga-file-preview:hover { background: #cffafe; }
+
+.ga-modal {
+  position: fixed; inset: 0; display: none; z-index: 2000;
+}
+.ga-modal.show { display: block; }
+.ga-modal-backdrop {
+  position: absolute; inset: 0; background: rgba(15, 23, 42, 0.7);
+}
+.ga-modal-dialog {
+  position: relative; z-index: 1; width: min(90vw, 1000px); height: min(85vh, 780px);
+  margin: 5vh auto; background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+.ga-modal-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--ga-gray-200);
+  background: #f8fafc;
+}
+.ga-modal-title {
+  font-size: 13px; font-weight: 700; color: var(--ga-gray-700); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ga-modal-close {
+  width: 32px; height: 32px; border: 1px solid var(--ga-gray-200); background: #fff; border-radius: 8px;
+  font-size: 20px; line-height: 1; color: var(--ga-gray-700); cursor: pointer;
+}
+.ga-modal-body {
+  height: calc(100% - 57px); background: #f1f5f9;
+}
+#gaPdfFrame {
+  width: 100%; height: 100%; background: #fff;
+}
 
 /* ---- Empty state ---- */
 .ga-empty {

@@ -68,10 +68,6 @@
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           Results <span class="ga-tab-badge" id="tabBadgeResults">0</span>
         </button>
-        <button class="ga-tab" data-tab="code">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          Agent Code
-        </button>
       </div>
 
       <!-- ===== TAB: EMAILS ===== -->
@@ -129,12 +125,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- ===== TAB: CODE ===== -->
-      <div class="ga-tab-content" id="tab-code">
-        <div class="ga-code-block" id="codeBlock"></div>
-      </div>
-
+<div id="gaPdfModal" class="ga-modal" aria-hidden="true">
+  <div class="ga-modal-backdrop" data-close="pdf-modal"></div>
+  <div class="ga-modal-dialog" role="dialog" aria-modal="true" aria-label="PDF Preview">
+    <div class="ga-modal-header">
+      <div id="gaPdfTitle" class="ga-modal-title">PDF Preview</div>
+      <button type="button" class="ga-modal-close" aria-label="Tutup preview" data-close="pdf-modal">×</button>
+    </div>
+    <div class="ga-modal-body">
+      <iframe id="gaPdfFrame" title="PDF Preview" src="" frameborder="0"></iframe>
     </div>
   </div>
 </div>
@@ -332,17 +335,70 @@
       var icon = fileIcon(f.name);
       var size = formatSize(f.size);
       var mod  = new Date(f.modified).toLocaleString('id-ID');
-      return '<div class="ga-file-card">' +
+      var ext = (f.name || '').split('.').pop().toLowerCase();
+      var isPdf = ext === 'pdf';
+      var actions = isPdf ?
+        '<div class="ga-file-actions"><button type="button" class="ga-file-preview" data-name="' + esc(f.name) + '">👁 Preview</button>' +
+        '<a href="' + BASE + '/download_file?name=' + encodeURIComponent(f.name) + '" class="ga-file-download" target="_blank">⬇ Download</a></div>' :
+        '<a href="' + BASE + '/download_file?name=' + encodeURIComponent(f.name) + '" class="ga-file-download" target="_blank">⬇ Download</a>';
+      return '<div class="ga-file-card' + (isPdf ? ' ga-file-card-pdf' : '') + '" data-name="' + esc(f.name) + '" data-is-pdf="' + (isPdf ? '1' : '0') + '">' +
         '<div class="ga-file-icon">' + icon + '</div>' +
         '<div class="ga-file-name">' + esc(f.name) + '</div>' +
         '<div class="ga-file-meta">' + size + ' &nbsp;·&nbsp; ' + mod + '</div>' +
-        '<a href="' + BASE + '/download_file?name=' + encodeURIComponent(f.name) + '" class="ga-file-download" target="_blank">⬇ Download</a>' +
+        actions +
       '</div>';
     }).join('') + '</div>';
+
+    el.filesGrid.querySelectorAll('.ga-file-card-pdf').forEach(function (card) {
+      card.addEventListener('click', function (event) {
+        if (event.target.closest('button') || event.target.closest('a')) return;
+        openPdfPreview(card.dataset.name);
+      });
+    });
+
+    el.filesGrid.querySelectorAll('.ga-file-preview').forEach(function (btn) {
+      btn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        openPdfPreview(btn.dataset.name);
+      });
+    });
   }
 
   el.fileSearch.addEventListener('input', renderFiles);
   el.fileTypeFilter.addEventListener('change', renderFiles);
+
+  function openPdfPreview(name) {
+    var modal = document.getElementById('gaPdfModal');
+    var frame = document.getElementById('gaPdfFrame');
+    var title = document.getElementById('gaPdfTitle');
+    if (!modal || !frame || !title) return;
+    title.textContent = name;
+    frame.src = BASE + '/preview_file?name=' + encodeURIComponent(name);
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closePdfPreview() {
+    var modal = document.getElementById('gaPdfModal');
+    var frame = document.getElementById('gaPdfFrame');
+    if (!modal || !frame) return;
+    frame.src = '';
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  document.addEventListener('click', function (event) {
+    var closeTarget = event.target.closest('[data-close="pdf-modal"]');
+    if (closeTarget) {
+      closePdfPreview();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closePdfPreview();
+    }
+  });
 
   // ─── RESULTS ──────────────────────────────────────────────────
   function renderResults() {

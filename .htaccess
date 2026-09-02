@@ -6,7 +6,7 @@
 
 
 RewriteEngine On
-RewriteBase /zhl/
+RewriteBase /zhl-app/
 RewriteCond $1 !^(index\.php|images|stylesheets|system/application/sources/)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
